@@ -1,0 +1,77 @@
+### Signup a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example1.com",
+  "password": "password123"
+}
+
+###
+
+### Login with existing user
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@example1.com",
+  "password": "password123"
+}
+
+###
+
+### Get user profile
+GET http://localhost:3000/api/profile
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlMmFjOGQ1LWE4YjktNDliZC04ZTgyLWNlZmU0MGRjNTExZiIsImlhdCI6MTcyNzIzNTQxNCwiZXhwIjoxNzI3MzIxODE0fQ.OAygKaSsaKYDEEeMdjwfcj80PkBAdDB4cXgchj5KDvk
+
+###
+
+### Update user profile
+PUT http://localhost:3000/api/profile
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlMmFjOGQ1LWE4YjktNDliZC04ZTgyLWNlZmU0MGRjNTExZiIsImlhdCI6MTcyNzIzNTQxNCwiZXhwIjoxNzI3MzIxODE0fQ.OAygKaSsaKYDEEeMdjwfcj80PkBAdDB4cXgchj5KDvk
+
+{
+  "name": "John Updated",
+  "email": "john.updated@example.com",
+  "password": "newpassword123"
+}
+
+###
+
+### Create a new task
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlMmFjOGQ1LWE4YjktNDliZC04ZTgyLWNlZmU0MGRjNTExZiIsImlhdCI6MTcyNzIzNTQxNCwiZXhwIjoxNzI3MzIxODE0fQ.OAygKaSsaKYDEEeMdjwfcj80PkBAdDB4cXgchj5KDvk
+
+{
+  "title": "Finalize event theme for kabaddi",
+  "description": "Finalize the theme for the upcoming event",
+  "status": "TO DO"
+}
+
+###
+
+### Get all tasks
+GET http://localhost:3000/api/tasks
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlMmFjOGQ1LWE4YjktNDliZC04ZTgyLWNlZmU0MGRjNTExZiIsImlhdCI6MTcyNzIzNTQxNCwiZXhwIjoxNzI3MzIxODE0fQ.OAygKaSsaKYDEEeMdjwfcj80PkBAdDB4cXgchj5KDvk
+
+###
+
+### Update a task
+PUT http://localhost:3000/api/tasks/f4bb3cb8-a142-407e-925b-8faa2bd3270d
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlMmFjOGQ1LWE4YjktNDliZC04ZTgyLWNlZmU0MGRjNTExZiIsImlhdCI6MTcyNzIzNTQxNCwiZXhwIjoxNzI3MzIxODE0fQ.OAygKaSsaKYDEEeMdjwfcj80PkBAdDB4cXgchj5KDvk
+
+{
+  "title": "Finalize event theme updated",
+  "description": "Finalize the theme for the upcoming event with updates",
+  "status": "IN PROGRESS"
+}
+
+###
+
+### Delete a task
+DELETE http://localhost:3000/api/tasks/f4bb3cb8-a142-407e-925b-8faa2bd3270d
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBlMmFjOGQ1LWE4YjktNDliZC04ZTgyLWNlZmU0MGRjNTExZiIsImlhdCI6MTcyNzIzNTQxNCwiZXhwIjoxNzI3MzIxODE0fQ.OAygKaSsaKYDEEeMdjwfcj80PkBAdDB4cXgchj5KDvk
